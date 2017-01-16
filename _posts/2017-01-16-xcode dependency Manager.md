@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Swift.optional"
+title: "CocoaPods이란 무엇인가?]"
 date: 2017-01-16 22:43:58
 image: '/assets/img/'
 description: 'xcode library dependancy'
