@@ -5,7 +5,7 @@ date: 2017-01-16 22:43:58
 image: '/assets/img/'
 description: 'xcode library dependancy'
 main-class: 'xcode'
-color: '#FC8536'
+color: '#1D91F5'
 tags:
 - xcode
 categories:
