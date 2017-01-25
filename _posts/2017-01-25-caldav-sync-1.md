@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "caldav-sync-1"
+title: "caldav 동기화 구현해보기(1)"
 date: 2017-01-25 18:45:28
 image: '/assets/img/'
 description: 'caldav 동기화 구현해보기(1)'
@@ -10,7 +10,7 @@ tags:
 - caldav
 categories:
 twitter_text:
-introduction:
+introduction: 'caldav 동기화 구현해보기(1)'
 ---
 
 # CalDav란?
@@ -35,4 +35,25 @@ CalDav 서버로 요청하고자 하는 자료를 XML형태로 보내게된다. 
     </D:prop> 
 </D:propfind> 
 ```
+
+
+# 주요 리소스 구조 
+- principal : Network Resource로 사람이나 컴퓨터의 신원정보로 사용된다.
+- calendar-home-set  : 유저가 사용하고있는 여러 캘린더들의 묶음이다.
+- calendarId : 캘린더를 구분하는 고유한 id이다. 
+- eventId : 이벤트(일정)을 구분하는 고유한 id이다. 
+- cTag : sync를 위한 tag이다. 랜덤한 해쉬값일수도있고, 증가하는 숫자일수도있고, 시간일 수도 있다.
+- eTag : sync를 위한 tag이다. 랜덤한 해쉬값일수도있고, 증가하는 숫자일수도있고, 시간일 수도 있다.
+
+# sync 과정
+캘린더마다 각자 고유한 calendarId를 가지고있고, cTag를 가지고 있다. 캘린더 내에는 많은 일정(event)들이 있고 이 이벤트마다 각자의 eventId와 eTag를 가지고 있다. 캘린더의 일정이 추가/삭제/변경이 될 경우 그 eTag는 변하게되며, 동시에 그 일정이 속한 캘린더의 cTag또한 변하게된다.
+
+즉 동기화과정은 
+
+1. cTag가 변경되었나 확인 
+2. cTag가 변경되었다면 캘린더 정보가 변경된것이므로 캘린더에 속한 이벤트들을 불러옴
+3. 이벤트들을 불러와서 eTag를 비교해 추가/삭제/변경된 이벤트들을 찾음 
+4. 추가/삭제/변경된 이벤트들만 받아와 동기화 
+
+와 같은 과정으로 이루어진다. 
 
