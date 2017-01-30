@@ -16,7 +16,7 @@ introduction: 'xcode dependency manager에대해 알아보자.'
 [cocoapods] xcode dependency manager에대해 알아보자.
 ====
 
-
+<br>
 xcode Dependancy manager
 ---
 바야흐로 2012년 xcode를 처음 접했을 때이다. 
@@ -29,7 +29,7 @@ xcode Dependancy manager
 
 위와같은 의문점을 가지고 알아봣던게 바로 `cocoapods'이다
 
-
+<br>
 cocoapods?
 ---
 
@@ -42,7 +42,7 @@ cocoapods?
 안드로이드에서의 gradle과 같은 역할을 해준다고 보면 생각하기 쉽다.
 
 ios/mac app개발시 필수적으로 널리 이용되고있다.
-
+<br>
 install cocoapods?
 ---
 
@@ -99,8 +99,9 @@ xcode기존 프로젝트의 디렉토리에서
 graldle이 나오기 한참전부터 cocoapods은 라이브러리 관리를 해주었다.(jspiner님 잘보시길..)
 
 이외에도 `pod update`등 명령어를 통해 라이브러리 관리를 보다 효율적으로 할 수 있다.
+<br>
 
-느낀점
+마치며...
 ---
 
 라이브러리의 관리는 정말 중요하다.  
