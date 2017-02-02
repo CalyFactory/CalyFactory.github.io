@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "cf2"
+title: "caldav 동기화 구현해보기(1)"
 date: 2017-02-03 01:44:09
 image: '/assets/img/'
-description: "caldav 동기화 구현해보기(1)"
+description: 'caldav 동기화 구현해보기(1)'
 main-class:
-color:
+color: '#7AAB13'
 tags:
 - caldav
 categories:
 twitter_text:
-introduction: "caldav 동기화 구현해보기(1)"
+introduction: 'caldav 동기화 구현해보기(1)'
 ---
 
 # CalDav 동기화 구조 
@@ -21,13 +21,13 @@ introduction: "caldav 동기화 구현해보기(1)"
 
 # Principal 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
+
 ```
 HTTP 1.1 PROPFIND
 url : /
 Depth : 0 
 Auth : Basic Auth 
 Body : 
-
 <?xml version='1.0' encoding='utf-8'?>
 <ns0:propfind xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:D="DAV" xmlns:ns0="DAV:">
     <ns0:prop>
@@ -38,6 +38,7 @@ Body :
 
 # HomeSet 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
+
 ```
 HTTP 1.1 PROPFIND
 url : /
@@ -55,6 +56,7 @@ Body :
 
 # Calendar 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
+
 ```
 HTTP 1.1 PROPFIND
 url : /
@@ -72,6 +74,7 @@ Body :
 
 # CTag 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
+
 ```
 HTTP 1.1 PROPFIND
 url : /
@@ -90,6 +93,7 @@ Body :
 
 # ETag 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
+
 ```
 HTTP 1.1 PROPFIND
 url : /
