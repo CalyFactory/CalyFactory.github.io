@@ -22,7 +22,7 @@ introduction: 'caldav 동기화 구현해보기(1)'
 # Principal 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
 
-```
+```xml
 HTTP 1.1 PROPFIND
 url : /
 Depth : 0 
@@ -39,7 +39,7 @@ Body :
 # HomeSet 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
 
-```
+```xml
 HTTP 1.1 PROPFIND
 url : /
 Depth : 0 
@@ -94,7 +94,7 @@ Body :
 # ETag 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
 
-```
+```xml
 HTTP 1.1 PROPFIND
 url : /
 Depth : 0 
