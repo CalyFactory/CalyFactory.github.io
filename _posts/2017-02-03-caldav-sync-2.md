@@ -57,7 +57,7 @@ Body :
 # Calendar 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
 
-```
+```xml
 HTTP 1.1 PROPFIND
 url : /
 Depth : 0 
@@ -75,7 +75,7 @@ Body :
 # CTag 요청 
 HTTP PROFIND 방식을 사용하며 Basic Auth로 인증한다.
 
-```
+```xml
 HTTP 1.1 PROPFIND
 url : /
 Depth : 0 
