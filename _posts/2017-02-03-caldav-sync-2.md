@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "caldav 동기화 구현해보기(1)"
+title: "caldav 동기화 구현해보기(2)"
 date: 2017-02-03 01:44:09
 image: '/assets/img/'
-description: 'caldav 동기화 구현해보기(1)'
+description: 'caldav 동기화 구현해보기(2)'
 main-class:
 color: '#7AAB13'
 tags:
 - caldav
 categories:
 twitter_text:
-introduction: 'caldav 동기화 구현해보기(1)'
+introduction: 'caldav 동기화 구현해보기(2)'
 ---
 
 # CalDav 동기화 구조 
