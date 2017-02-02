@@ -14,7 +14,7 @@ introduction: 'caldav 동기화 구현해보기(2)'
 ---
 
 # CalDav 동기화 구조 
-[img1](https://github.com/CalyFactory/CalyFactory.github.io/assets/img/res_20170203_1.png)
+![img1](https://github.com/CalyFactory/CalyFactory.github.io/blob/master/assets/img/res_20170203_2.png?raw=true)
 - 유저는 1개의 인증정보(Principal)을 가지고 있다.
 - 인증정보(Principal) 에는 하나의 묶음(homeset)가 있다.
 - 하나의 묶음(homeset) 에는 캘린더들이 있다.
@@ -114,7 +114,7 @@ Body :
     </c:filter>
 </c:calendar-query>
 ```
-[img1](https://github.com/CalyFactory/CalyFactory.github.io/assets/img/res_20170203_2.png)
+![img1](https://github.com/CalyFactory/CalyFactory.github.io/blob/master/assets/img/res_20170203_1.png?raw=true)
 
 위와 같은 과정을 python으로 구현하여 [오픈소스](https://github.com/CalyFactory/python-caldavclient)화 하였다.
 
