@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "caldav 동기화 구현해보기(2)"
+title: "caldav 동기화 구현해보기(3)"
 date: 2017-02-10 23:03:39
 image: '/assets/img/'
-description: "caldav 동기화 구현해보기(2)"
+description: "caldav 동기화 구현해보기(3)"
 main-class:
 color:
 tags:
 categories:
 twitter_text:
-introduction: "caldav 동기화 구현해보기(2)"
+introduction: "caldav 동기화 구현해보기(3)"
 ---
 
 지난번 포스팅까진 caldav의 구조와 데이터 요청 방식을 알아봤었다. 이번 포스팅에선 python을 통해 실제로 데이터를 주고받아 볼 것이다. 예제에선 apple calendar를 사용할 것이다.
