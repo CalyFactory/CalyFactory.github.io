@@ -1,0 +1,238 @@
+---
+layout: post
+title: "json을 파싱해보자"
+date: 2017-02-23 01:06:49
+image: '/assets/img/'
+description: "json을 파싱해보자"
+main-class: 'java'
+color:
+tags:
+- java
+- json
+categories:
+twitter_text:
+introduction: "json을 파싱해보자"
+---
+
+json을 파싱해보자 
+=====
+
+---
+layout: post
+title: "json을 파싱해보자"
+date: 2017-02-23 01:06:49
+image: '/assets/img/'
+description: "json을 파싱해보자"
+main-class: 'java'
+color:
+tags:
+- java
+- json
+categories:
+twitter_text:
+introduction: "json을 파싱해보자"
+---
+
+json을 파싱해보자 
+=====
+
+json을 파싱해보기 전에, json이란 무엇일까?
+
+
+json은 JavaScript Object Notation으로 데이터를 주고받을때 사용되는 포맷 중 하나이다. 본래는 자바스크립트 언어로부터 파생되어 자바스크립트의 구문 형식을 따르지만 언어 독립형 데이터 포맷이다. 즉 프로그래밍 언어나 플랫폼에 독립적이므로, C, C++, C#, JAVA, PYTHON 등 여러 프로그래밍 언어에서 사용 할 수 있다.
+
+JSON 포맷은 [RFC 7159](https://tools.ietf.org/html/rfc7159)에 기술되어있다.
+
+json은 key:value 타입으로 데이터를 표현하며, Object와 Array가 있다.
+
+###Object
+```javascript
+{
+	"key1": "value1",
+	"key2": "value2"
+}
+```
+object는 key/value로 표현되고 {}중괄호로 시작과 끝을 나타낸다.
+
+###Array
+```javascript
+[
+	"value1",
+	"value2",
+	"value3"
+]
+```
+array는 []대괄호로 구분되고 각 요소는 기본 자료형이나 배열, 객체가 될 수 있다.
+
+Object와 Array를 함께 섞어 다양한 데이터를 표현 할 수 있다.
+
+```javascript
+{
+    "name": "hello!",
+    "data": {
+        "name": "jspiner",
+        "age": 8,
+        "birth": 1996
+    },
+    "friends": [
+        "john",
+        "smith",
+        "sam"
+    ],
+    "books": [
+        {
+            "name": "book1",
+            "price": 10000
+        },
+        {
+            "name": "book2",
+            "price": 15000
+        },
+        {
+            "name": "book3",
+            "price": 7000
+        }
+    ]
+}
+```
+
+이렇게 데이터를 표현하면 프로그래밍 언어와 플랫폼에 독립적이기 때문에 서로 다른 시스템 간에 통신을 하기에 용의합니다.
+
+
+
+json 파싱하기
+======
+
+이런 json 포맷을 이해할 수 있는 자료형으로 파싱하기 위한 다양한 라이브러리들이 있습니다.
+
+기본적으로 java의 JsonObject와 JsonArray로 json을 파싱할 수 있습니다.
+
+```javascript
+{
+    "name": "hello!",
+    "data": {
+        "name": "jspiner",
+        "age": 8,
+        "birth": 1996
+    },
+    "friends": [
+        "john",
+        "smith",
+        "sam"
+    ],
+    "books": [
+        {
+            "name": "book1",
+            "price": 10000
+        },
+        {
+            "name": "book2",
+            "price": 15000
+        },
+        {
+            "name": "book3",
+            "price": 7000
+        }
+    ]
+}
+```
+```java
+
+JsonParser jsonParser = new JsonParser();
+
+JsonObject jsonObject = (JsonObject) jsonParser.parse(json);
+System.out.print("name : " + jsonObject.get("name"));
+```
+결과값
+
+
+```
+name : hello!
+```
+
+위 예제는 root jsonobject에 있는 key인 'name'을 찾아 그 value를 가져왔습니다.
+
+
+
+object 안에 object가 있는 경우는 아래와 같이 파싱해 볼 수 있습니다.
+
+```java
+
+JsonParser jsonParser = new JsonParser();
+
+JsonObject jsonObject = (JsonObject) jsonParser.parse(json);
+JsonObject dataObject = (JsonObject) jsonObject.get("data");
+
+System.out.print("name : " + dataObject.get("name"));
+System.out.print("age : " + dataObject.get("age"));
+System.out.print("birth : " + dataObject.get("birth"));
+```
+
+```
+name : jspiner
+age : 8
+birth : 1996
+```
+
+직렬화(Serialization) 이용하기 
+=====
+직렬화란 객체를 직렬화하여 전송 가능한 형태로 만드는것을 의미한다. 객체들의 데이터를 특정한 포맷의 연속적인 데이터로 변형하여 데이터를 읽도록 하는 것이다.
+
+java에서는 직렬화를 지원하는 Gson Jackson등의 라이브러리가 있다.
+
+JsonObject로 파싱하던 위 코드를 Gson으로 파싱하기 위해선 우선 객체를 담을 클래스를 구현한다.
+
+```java
+class DataJson {
+
+    @SerializedName("name")
+    public String name;
+
+    @SerializedName("data")
+    public Data data;
+
+    @SerializedName("books")
+    public List<Book> books;
+
+    class Data{
+        @SerializedName("name")
+        public String name;
+
+        @SerializedName("age")
+        public int age;
+
+        @SerializedName("birth")
+        public int birth;
+    }
+
+    class Book{
+        @SerializedName("name")
+        public String name;
+
+        @SerializedName("price")
+        public int price;
+    }
+
+}
+// @SerializedName은 파싱할때 사용될 key 이름이다.
+```
+이제 변환할 string을 아래와 같이 사용하기만 하면 된다.
+```java
+DataJson dataJson= new Gson().fromJson(json, DataJson.class);
+
+System.out.println("name : " + dataJson.name);
+
+for(DataJson.Book book : dataJson.books){
+    System.out.println("book name : " + book.name);
+    System.out.println("book price : " + book.price);
+}
+
+```
+이렇게 객체로 데이터를 관리하면, 데이터를 사용할때마다 key,value로 찾아가면서 사용하지 않고, 변수로 쉽게 사용 할 수 있다.
+하지만 직렬화가 무조건 좋은것은 아니다. json 규격이 일정해 클래스로 지정 할 수 있을 경우에만 사용 할 수 있기에, 데이터 타입이 유동적으로 변할 경우에는 사용하기가 힘들다. 
+
+
+
+
+
+
