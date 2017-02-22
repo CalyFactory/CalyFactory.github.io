@@ -8,7 +8,6 @@ main-class: 'java'
 color:
 tags:
 - java
-- json
 categories:
 twitter_text:
 introduction: 'json을 파싱해보자'
