@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "POSTMAN에서 Custom Method로 요청하기"
-date: 2017-03-03 05:36:51
+date: 2017-03-02 21:36:51
 image: '/assets/img/'
 description: "POSTMAN에서 Custom Method로 요청하기"
 main-class:
