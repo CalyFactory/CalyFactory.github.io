@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Travis로 안드로이드 배포하기(CD)"
-date: 2017-03-15 18:35:28
+date: 2017-03-15 09:35:28
 image: '/assets/img/'
 description: "Travis로 안드로이드 배포하기(CD)"
 main-class: 'DevOps'
