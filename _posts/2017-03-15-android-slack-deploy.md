@@ -27,7 +27,7 @@ CD란?
 
 한두대의 서버라면 수동으로 배포해도 큰 문제가 없지만 여러대가 되는순간 매우 비효율적이게 된다.
 
-![terminal](https://github.com/CalyFactory/CalyFactory.github.io/blob/master/assets/img/jspiner/cd_1.png?raw=true)
+![terminal](https://github.com/CalyFactory/CalyFactory.github.io/blob/master/assets/img/jspiner/cd_1.jpg?raw=true)
 
 어플리케이션의 예를 보자
 
