@@ -264,3 +264,5 @@ node.js-express를 이용한 서버 코드다.
 코드를 모두 저장한 뒤, 정상 실행을 하게 되면 다음과 같은 화면을 볼 수 있을 것이다.
 
 ![RESULT](https://github.com/CalyFactory/CalyFactory.github.io/blob/master/assets/img/refgjin/post10_result.png?raw=true)
+
+코드 전체는 [이 링크](https://github.com/jonghyeon-lee/calyfactory-blog-source1)에서 참조할 수 있다.
