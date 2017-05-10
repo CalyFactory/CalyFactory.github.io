@@ -129,7 +129,7 @@ public class TestActivity extends Activity{
 에러가 수집되면 바로 메일로 알려주고, 대시보드에 추가된다.(non fatal에러는 제외)
 
 
-![terminal](https://github.com/CalyFactory/CalyFactory.github.io/blob/master/assets/img/jspiner/fabric_1.jpg?raw=true)
+![terminal](https://github.com/CalyFactory/CalyFactory.github.io/blob/master/assets/img/jspiner/fabric_1.png?raw=true)
 
 추가로 핸들링을 한 에러들에 대해 직접 로그를 남길수도 있다.
 
