@@ -19,6 +19,7 @@ production/develop 배포
 
 <br>	
 #### 왜
+
 서비스를 단단하게 운영하기 위해서는 기본적으로 3가지 서버를 가져간다고한다.
 
 * production
@@ -35,7 +36,9 @@ caly에서는 develop 과 production 서버를 운용하고있다.
 
 
 <br>
+
 #### 0. Git
+
 caly는 github을 사용하고 있고, master/develop/feature등의 브랜치를 나눠서 사용하고있다.
 기본적으로 master에는 정말 release될 코드들만이 올라가며 develop에서는 develop코드들 그리고 feature등 조그마한 가지들에서는 각각 수정될 기능들을 만들어 작업하고있다.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "swift - map/filter/reduce."
+title: "swift - extension."
 date: 2017-05-08 12:43:58
 image: '/assets/img/'
 description: 'swift - extension'

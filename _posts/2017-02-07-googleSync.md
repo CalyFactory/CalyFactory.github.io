@@ -17,6 +17,7 @@ introduction: '구글 캘린더 sync는 어떻게 알고 맞출수있을까'
 Google calendar Synchronization
 =====
 <br>
+
 왜?
 ---
 유저의 캘린더 변화 감지까지는 pushNotification을 통해 알수 있다.(이전포스트)
@@ -39,6 +40,7 @@ Synchronize Resources
 syncToken이라는 값은 `현재 상태에 대한 고유 값`으로 생각하면 쉽다.
 
 <br>
+
 Sync example
 ---
 
@@ -59,6 +61,7 @@ Sync example
 순서대로 한번 실행해보자.
 
 <br>
+
 1. 최초 일정 리스트 호출
 ---
 
@@ -111,6 +114,7 @@ headers = {
 위에서 말했든 저 토큰값이 현재 리스트에대한 고유값이되고 후에 이토큰을 이용해 무엇이 달라졌나 확인해 볼것이다.
 
 <br>
+
 2.nextSyncToken
 ---
 
@@ -125,8 +129,10 @@ nextSyncToken을 기억해둔다.
  캘린더에 이벤트를 추가한다. 
 
  <br>
+
 4.resourceChange감지
 ---
+
 캘린더 이벤트가 추가되었음으로 정해놓은 콜백 api로 무언가 변화됬다는것이 감지 될것이고 헤더에 아래와 같은 정보들 이 호출될것이다.
 
 
@@ -220,8 +226,10 @@ headers = {
 위 리스트에서 items에 status 및 updated등 타임을 통해 해당 데이터가 수정, 추가등의 상황을 파악 할수있다.
 
 <br>
+
 마치며...
 ---
+
 존재하는 대부분의 캘린더는 caldav라는 communication protocal을 사용한다. 
 
 구글역시 caldav로 connection하는 페이지를 제공한다.(조금 부실하다) 
