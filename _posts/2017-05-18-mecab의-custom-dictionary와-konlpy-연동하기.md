@@ -37,8 +37,7 @@ Dictionary
 
 모든 작업은 리눅스 기준으로 진행한다.
 
-1. mecab-ko 설치
----
+*1. mecab-ko 설치*
 
 [다운로드 링크](https://bitbucket.org/eunjeon/mecab-ko/downloads/)에서 최신 버전의 mecab-xxx-ko-x.x.x.tar.gz를 다운받아서 설치한다.
 
@@ -52,8 +51,8 @@ make check
 sudo make install
 ```
 
-2. mecab-ko-dic 설치
----
+
+*2. mecab-ko-dic 설치*
 
 [다운로드 링크](https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/)에서 최신 버전의 mecab-xxx-ko-x.x.x.tar.gz를 다운받아서 설치한다.
 
@@ -78,32 +77,34 @@ mecab -d /usr/locab/lib/mecab/dic/mecab-ko-dic
 
 ![post_mecab-ko_result](https://github.com/CalyFactory/CalyFactory.github.io/blob/master/assets/img/refgjin/post20170518_mecab-ko.png?raw=true)
 
-3. Konlpy 이용
----
+
+*3. Konlpy 이용*
 
 다음과 같은 [공식 Doc](http://konlpy.org/ko/latest/api/konlpy.tag/#mecab-class)의 소스를 통해 적용된 것을 확인할 수 있다.
 
 {% highlight python %}
->>> from konlpy.tag import Mecab
->>> mecab = Mecab()
->>> print(mecab.morphs(u'영등포구청역에 있는 맛집 좀 알려주세요.'))
+
+from konlpy.tag import Mecab
+mecab = Mecab()
+print(mecab.morphs(u'영등포구청역에 있는 맛집 좀 알려주세요.'))
 ['영등포구', '청역', '에', '있', '는', '맛집', '좀', '알려', '주', '세요', '.']
->>> print(mecab.nouns(u'우리나라에는 무릎 치료를 잘하는 정형외과가 없는가!'))
+print(mecab.nouns(u'우리나라에는 무릎 치료를 잘하는 정형외과가 없는가!'))
 ['우리', '나라', '무릎', '치료', '정형외과']
->>> print(mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?'))
+print(mecab.pos(u'자연주의 쇼핑몰은 어떤 곳인가?'))
 [('자연', 'NNG'), ('주', 'NNG'), ('의', 'JKG'), ('쇼핑몰', 'NNG'), ('은', 'JX'), ('어떤', 'MM'), ('곳', 'NNG'), ('인가', 'VCP+EF'), ('?', 'SF')]
+
 {% endhighlight %}
 
 지금까지 Mecab의 설치 후 적용을 진행해봤다.
 
 이제부터는 본격적으로 Mecab의 User(Custom) Dictionary를 적용해보자.
 
-4. Custom Dictionary 작성
----
+*4. Custom Dictionary 작성*
 
 원하는 Custom Dictionary를 작성하기 전에 다음과 같은 특성을 알아야한다.
 
 > *시스템 사전* 항목 추가 : 사전 업데이트가 잦지 않고, 속도 저하를 원하지 않는 경우
+
 > *사용자 사전* 항목 추가 : 사전 업데이트가 잦고, 관리자 권한이 없는 경우
 
 CalyFactory 프로젝트는 작업 특성 상, 사용자 이벤트 분석 데이터가 자주 갱신될 것이므로 사용자 사전에 등록을 진행한다.
