@@ -15,8 +15,7 @@ introduction: 'swift - map/filter/reduce.'
 
 
 <br><br>
-GUARD
-====================
+# GUARD
 
 
 * if 문과 같이 bool에 따라 동작한다. if의 예외상황은 else로 사용하지만 Guard를 사용하면 보다 명확히 표현 할 수 있다. 
@@ -24,8 +23,8 @@ GUARD
 * 아래와 같이 생겨먹었다.
 
 <br>
-struct
-------------
+### struct
+
 ~~~
 guard {booltype} else {
 	//예외상황 실행문
@@ -33,8 +32,7 @@ guard {booltype} else {
 ~~~
 
 <br>
-ex1
-------------
+### ex1
 
 * 의도: else일 경우 패스하고 싶다. 
 
@@ -49,8 +47,7 @@ for i in 0...3 {
 ~~~
 
 <br>
-ex2
-------------
+### ex2
 
 * 의도: optional binding
 
@@ -72,8 +69,7 @@ func greet(_ person: [String: String]) {
 ~~~
 
 <br>
-ex3
-------------
+### ex3
 
 * 다만 return,break,continue등이 쓰이지 않는 일반적인 if 분기 등에서는 쓰일 수 없다. 
 * 쓰일 필요도 없다.
@@ -90,8 +86,7 @@ guard first > second else {
 
 
 <br><br>
-Map
-================
+## Map
 
 * 매개변수로 함수를 갖는 함수를 고차함수라고 한다
 * 맵,리듀스,필터 등이 그것이다.
@@ -103,8 +98,7 @@ Map
 
 
 <br>
-ex1
-------------
+## ex1
 
 
 ~~~
@@ -131,8 +125,7 @@ print (strings)
 ~~~
 
 <br>
-ex2
-------------
+### ex2
  
  * 클로저를 통해 더 간단히 만들어 보자
  
@@ -147,8 +140,7 @@ ex2
  ~~~
  
 <br>
-ex3
-------------
+### ex3
  
 * 클로저를 이용하여 간결하게 map을 사용해 보자
 
@@ -161,8 +153,7 @@ print(doubledEvenNumber)
 ~~~
 
 <br><br>
-Filter
-============
+## Filter
 
 > 컨테이너 내부의 값을 걸러서 추출해주는 고차함수.
 
@@ -172,7 +163,7 @@ Filter
 * 반환값은 bool 인데 해당 조건에 맞는(true)것이면 넣어주고, 아니면 걸러낸다.
 
 <br>
-#####ex1
+### ex1
 
 ~~~
 let numbers: [Int] =  [0,1,2,3,4,5]
@@ -182,14 +173,12 @@ print(evenNumbers)
 
 
 
-map & filter
-===========
+## map & filter
 
 * map과  reduce를 동시에 사용해보자
 
 <br>
-ex1
-------------
+### ex1
 ~~~
 let numbers: [Int] = [0,1,2,3,4,5]
 let mappedNumbers: [Int] = numbers.map{ $0 + 3 }
@@ -197,8 +186,7 @@ let evenNumbers: [Int] = mappedNumbers.filter{ $0 % 2 == 0}
 ~~~
 
 <br>
-ex2
-------------
+### ex2
 
 * 한번에 연결하여 보여줄수도 있다.
 
@@ -208,8 +196,7 @@ let evenNumbers: [Int] = numbers.map{ $0 + 3 }.filter { $0 % 2 == 0 }
 
 
 
-Reduce
-=============
+## Reduce
 
 
 > 합쳐주는 기능을 가진 고차함수.
@@ -219,8 +206,7 @@ Reduce
 
 
 <br>
-ex1
-------------
+### ex1
 
 ~~~
 let numbers: [Int] = [1,2,3]
@@ -242,8 +228,7 @@ print(sumNames)
 
 
 <br>
-마치며
-===========
+## 마치며
 
 * 조금 익숙한 문법이다. react에서 본듯하다. 
 * 이해가 수월해서 재미있었다.

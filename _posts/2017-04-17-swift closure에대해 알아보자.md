@@ -13,12 +13,11 @@ twitter_text:
 introduction: 'swift - closure'
 ---
 
-swift - closure
-=====
+# swift - closure
 
 
 <br>	
-#### closure
+## closure
 Swift는 clousre가 있어 그 언어가 더욱 강력하다.
 closure는 변수나 상수에서 참조 혹은 값을 바로 넣고 저장할 수있게됩니다. 
 변수나 상수를 closing한다하여 closure라고 한다고 합니다. 
@@ -26,7 +25,7 @@ closure는 변수나 상수에서 참조 혹은 값을 바로 넣고 저장할 �
 
 
 <br>
-#### 기본클로저
+### 기본클로저
 
 이와같은 함수가 존재한다할경우
 
@@ -55,7 +54,7 @@ let reversedd: [String] = namesss.sorted(by: { (first: String, second: String) -
 실행코드
 ~~~
 
-##### 후행 클로저
+### 후행 클로저
 
 기본 클로저상태에서 보다 축약하여 아래와 같이 사용한다. 
 단 마지막 클로저에서만 사용이 가능하다.
@@ -66,7 +65,7 @@ let reverseddBackClouser2: [String] = namesss.sorted{ (first: String, second: St
 ~~~
 
 
-##### 타입유추 클로저
+### 타입유추 클로저
 
 아래와 같이 기존 함수의 타입을 준수한다면 굳이 표현하지 않더라도 문제 없이 돌아갑니다.
 
@@ -89,7 +88,7 @@ let reversedBackClouser5: [String] = namesss.sorted {
 }
 ~~~
 
-#### 마치며
+### 마치며
 간단하게 클로저의 개념에 대해 알아봤습니다.
 후에 다양한 클로저에 대해 알아보겠습니다.
 

@@ -14,8 +14,8 @@ twitter_text:
 introduction: 'python logging 패키지 이용해보기'
 ---
 
-python log를 찍어보자.
-=====
+# python log를 찍어보자.
+
 
 <br>
 
@@ -86,8 +86,8 @@ python3 caly.py --logging-level=error
 
 <br>
 
-마치며...
----
+## 마치며...
+
 
 debug/production 모드의 로그는 기본적으로 사용해봤지만. 
 

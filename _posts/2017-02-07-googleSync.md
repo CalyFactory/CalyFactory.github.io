@@ -14,12 +14,12 @@ twitter_text:
 introduction: '구글 캘린더 sync는 어떻게 알고 맞출수있을까'
 ---
 
-Google calendar Synchronization
-=====
+# Google calendar Synchronization
+
 <br>
 
-왜?
----
+### 왜?
+
 유저의 캘린더 변화 감지까지는 pushNotification을 통해 알수 있다.(이전포스트)
 
 그렇다면 유저가 어떤 변화를 했기에 push가 왔을까?
@@ -28,8 +28,8 @@ Google calendar Synchronization
 
 
 
-Synchronize Resources 
----
+### Synchronize Resources 
+
 
 구글 캘린더 api 에서는 위와같은 싱크를 처리하는 [가이드](https://developers.google.com/google-apps/calendar/v3/sync)를 만들어놓았다. 
 
@@ -41,8 +41,8 @@ syncToken이라는 값은 `현재 상태에 대한 고유 값`으로 생각하�
 
 <br>
 
-Sync example
----
+### Sync example
+
 
 예를 들어 이벤트 추가 sync를 맞춰본다고 가정하자.
 
@@ -62,8 +62,8 @@ Sync example
 
 <br>
 
-1. 최초 일정 리스트 호출
----
+### 1. 최초 일정 리스트 호출
+
 
 일정 리스트 api를 호출해보자.
 
@@ -115,23 +115,23 @@ headers = {
 
 <br>
 
-2.nextSyncToken
----
+### 2.nextSyncToken
+
 
 nextSyncToken을 기억해둔다.
 
 여기선 예시로 `ABC=` 라고 저장해 둔다.
 
 <br>
-3.이벤트 추가
----
+### 3.이벤트 추가
+
 
  캘린더에 이벤트를 추가한다. 
 
  <br>
 
-4.resourceChange감지
----
+### 4.resourceChange감지
+
 
 캘린더 이벤트가 추가되었음으로 정해놓은 콜백 api로 무언가 변화됬다는것이 감지 될것이고 헤더에 아래와 같은 정보들 이 호출될것이다.
 
@@ -152,8 +152,8 @@ Content-Type:
 Accept-Encoding: gzip,deflate,br
 ~~~
 
-5,6.감지한 캘린더의 이벤트 리스트를 호출한다.
----
+### 5,6.감지한 캘린더의 이벤트 리스트를 호출한다.
+
 
 이제 해당 콜백에서 다시 이벤트 요청을 호출하는데 이때 아까 저장해두었던 nextSyncToken을 키값을 syncToken으로 하여 넣어준다.
 
@@ -227,8 +227,8 @@ headers = {
 
 <br>
 
-마치며...
----
+## 마치며...
+
 
 존재하는 대부분의 캘린더는 caldav라는 communication protocal을 사용한다. 
 

@@ -14,14 +14,12 @@ introduction: 'swift - extension'
 ---
 
 <br><br>
-Extension
-====================
+# Extension
 
 * 기능확장을 위한 여러가지들을 알아보자.
 
 <br>
-Subscript
-================
+# Subscript
 
 
 * 타입의 요소에 접근하는 단축 문법을 subscript라고 합니다.
@@ -30,8 +28,7 @@ Subscript
 
 
 <br>
-ex1
-------------
+### ex1
 * school class에 [1](subscript)을 통해  students의 두번째 학생 정보를 가져올 수 있는 코드입니다.
 * 해당 번호에 학생을 추가할 수도 있도록 하였습니다.
  
@@ -91,8 +88,7 @@ Optional("a")
 ~~~
 
 <br><br>
-inheritance
-================
+## inheritance
 
 * 다른언어에 있는 상속과 같은 개념입니다.
 * 부모클래스의 메서드를 호출할수있고 프로퍼티,subscript도 사용가능합니다. 
@@ -101,8 +97,7 @@ inheritance
 
 
 <br>
-ex1
-------------
+### ex1
 
 * 기본 상속받는 형태 입니다.
 
@@ -112,8 +107,7 @@ class name: 상위클래스 {
 ~~~
 
 <br>
-ex2
-------------
+### ex2
 * 기본적인 상속 모양을 봅시다. 
 * 상속한 상위 메소드를 사용할 수 있는것을 확인할 수 있습니다.
  
@@ -150,8 +144,7 @@ pkStudent.speak()
 
  
 <br><br>
-Override
-============
+## Override
 
 * 자바와같이 부모로부터 받은 특성을 재정의 할 수 있습니다.
 * override 키워드를 써줘야합니다.
@@ -159,8 +152,7 @@ Override
 * 아참 subscript도 재정의가 가능하고, super로 마찬가지로 접근이 가능해요.
 
 <br>
-ex1
-------------
+### ex1
 * 위의 코드에서 간단하게 수정하여 speak를 override 했습니다.
 * super.speak row를 통해 상위 부모의 클래스가 호출 되는 것을 확인할 수 있습니다.
 
@@ -199,8 +191,7 @@ pkStudent.speak()
 ~~~
 
 <br>
-ex2
-------------
+### ex2
 
 * 함수와 마찬가지로 변수도 override 해줄 수 있습니다.
 
@@ -248,8 +239,7 @@ pkStudent.introduction
 * 프로퍼티 감시자(didset, willset) 역시 재정의 할수 있습니다. 하지만 생략하죠. 
 
 <br>
-ex3
-------------
+### ex3
 
 * subscript도 override 할 수 있습니다. (쓰이는 방식만 참고)
 
@@ -284,8 +274,7 @@ middleSchool.middleStudents = [Student(name: "a",number: 10),Student(name: "a",n
 print(middleSchool[0])
 ~~~
 <br>
-ex4
-------------
+### ex4
 
 * !재정의는 final 문구를 통해 막을 수 있습니다
 
@@ -300,8 +289,7 @@ final class Student: Person {
 
 <br>
 <br>
-마치며
-===========
+## 마치며
 
 * 상속자체는 다른 언어(java)등과 유사하여 이해하기 상대적으로 쉬웠다.
 * 색다른 개념들을 숙지하는데 더욱 열을 내야할 것이다.

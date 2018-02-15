@@ -13,12 +13,12 @@ twitter_text:
 introduction: 'xcode dependency manager에대해 알아보자.'
 ---
 
-[cocoapods] xcode dependency manager에대해 알아보자.
-====
+# [cocoapods] xcode dependency manager에대해 알아보자.
+
 
 <br>
-xcode Dependancy manager
----
+### xcode Dependancy manager
+
 바야흐로 2012년 xcode를 처음 접했을 때이다. 
 
 처음 ios를 개발한답시고 책을 사서 접했을 때 외부 라이브러리 연동은 파일을 직접 라이브러리에 임포트하는 형식으로 사용되었다.
@@ -30,8 +30,8 @@ xcode Dependancy manager
 위와같은 의문점을 가지고 알아봣던게 바로 `cocoapods'이다
 
 <br>
-cocoapods?
----
+### cocoapods?
+
 
 > CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. It has over 27 thousand libraries and is used in over 1.6 million apps. CocoaPods can help you scale your projects elegantly.
 
@@ -46,7 +46,7 @@ ios/mac app개발시 필수적으로 널리 이용되고있다.
 install cocoapods?
 ---
 
-1. cocoapdos을 설치해보자.
+#### 1. cocoapdos을 설치해보자.
 
 ~~~
 	sudo gem install cocoapods
@@ -56,7 +56,7 @@ install cocoapods?
 
 이제 코코아팟을 사용할 준비가 됬다.
 
-2. 다음 할일은 `Podfile`을 만드는 일이다.
+#### 2. 다음 할일은 `Podfile`을 만드는 일이다.
 
 팟파일은 어떤 라이브러리가 해당 앱에 종속되는지. 그리고 버전은 무엇인지. 새로운 버전의 라이브러리가 존재할경우 어떻게 설치할건지.(기존 버저전을 유지하거나, 새로운 버전을 다운받는등의.. 버전설정) 등에대한 정보를 입력한다.
 (node를 접해본사람이라면 package.json과 비슷하단 느낌이 들것이다. 바로 그것이다!)
@@ -75,7 +75,7 @@ end
 
 위와같이 팟파일을 만들어 주던가, `Pod init`을 통해 만들어도된다.
 
-3. 이제 실제 팟파일을 가지고 기존 xcode 프로젝트와 연결해보자.
+#### 3. 이제 실제 팟파일을 가지고 기존 xcode 프로젝트와 연결해보자.
 
 xcode기존 프로젝트의 디렉토리에서 
 
@@ -101,8 +101,8 @@ graldle이 나오기 한참전부터 cocoapods은 라이브러리 관리를 해�
 이외에도 `pod update`등 명령어를 통해 라이브러리 관리를 보다 효율적으로 할 수 있다.
 <br>
 
-마치며...
----
+## 마치며...
+
 
 라이브러리의 관리는 정말 중요하다.  
 
